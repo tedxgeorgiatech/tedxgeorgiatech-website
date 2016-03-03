@@ -14,8 +14,6 @@
 	    );
 	};
 
-
-
 	// Carousel Feature Slide
 	var owlCrouselFeatureSlide = function() {
 		
@@ -173,8 +171,6 @@
 		});
 	};
 
-
-
 	// Animations
 
 	// About Us
@@ -247,11 +243,11 @@
 
 	};
 
-	// Services
-	var servicesAnimate = function() {
+	// Events
+	var eventAnimate = function() {
 
-		if ( $('#fh5co-our-services').length > 0 ) {	
-			$('#fh5co-our-services .to-animate').each(function( k ) {
+		if ( $('#fh5co-our-events').length > 0 ) {	
+			$('#fh5co-our-events .to-animate').each(function( k ) {
 				
 				var el = $(this);
 				
@@ -263,109 +259,30 @@
 		}
 
 	};
-	var servicesWayPoint = function() {
+	var eventWayPoint = function() {
 
-		if ( $('#fh5co-our-services').length > 0 ) {
-			$('#fh5co-our-services').waypoint( function( direction ) {
+		if ( $('#fh5co-our-events').length > 0 ) {
+			$('#fh5co-our-events').waypoint( function( direction ) {
 										
 				if( direction === 'down' && !$(this).hasClass('animated') ) {
 
 
-					setTimeout(servicesAnimate, 200);
+					setTimeout(eventAnimate, 200);
 
 					
 					$(this.element).addClass('animated');
 						
 				}
-			} , { offset: '95%' } );
-		}
-
-	};
-
-
-	// Features
-	var featuresAnimate = function() {
-
-		if ( $('#fh5co-features').length > 0 ) {	
-			$('#fh5co-features .to-animate').each(function( k ) {
-				
-				var el = $(this);
-				
-				setTimeout ( function () {
-					el.addClass('fadeInUp animated');
-				},  k * 200, 'easeInOutExpo' );
-				
-			});
-		}
-
-	};
-	var featuresWayPoint = function() {
-
-		if ( $('#fh5co-features').length > 0 ) {
-			$('#fh5co-features').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this).hasClass('animated') ) {
-
-
-					setTimeout(function(){
-						$('.animate-features-1').addClass('animated fadeIn');
-					}, 100);
-					setTimeout(function(){
-						$('.animate-features-2').addClass('animated fadeIn');
-					}, 200);
-					setTimeout(featuresAnimate, 500);
-					setTimeout(function(){
-						$('.animate-features-3').addClass('animated fadeInUp');
-					}, 1400);
-
-					
-					$(this.element).addClass('animated');
-						
-				}
-			} , { offset: '95%' } );
-		}
-
-	};
-
-
-	// testimonials
-	var testimonialsAnimate = function() {
-
-		if ( $('#fh5co-testimonials').length > 0 ) {	
-			$('#fh5co-testimonials .to-animate').each(function( k ) {
-				
-				var el = $(this);
-				
-				setTimeout ( function () {
-					el.addClass('fadeInUp animated');
-				},  k * 200, 'easeInOutExpo' );
-				
-			});
-		}
-
-	};
-	var testimonialsWayPoint = function() {
-
-		if ( $('#fh5co-testimonials').length > 0 ) {
-			$('#fh5co-testimonials').waypoint( function( direction ) {
-										
-				
-					setTimeout(testimonialsAnimate, 200);
-					
-					
-					$(this.element).addClass('animated');
-						
-			
 			} , { offset: '95%' } );
 		}
 
 	};
 
 	// Pricing
-	var pricingAnimate = function() {
+	var pastAnimate = function() {
 
-		if ( $('#fh5co-pricing').length > 0 ) {	
-			$('#fh5co-pricing .to-animate').each(function( k ) {
+		if ( $('#fh5co-past').length > 0 ) {	
+			$('#fh5co-past .to-animate').each(function( k ) {
 				
 				var el = $(this);
 				
@@ -377,18 +294,18 @@
 		}
 
 	};
-	var pricingWayPoint = function() {
+	var pastWayPoint = function() {
 
-		if ( $('#fh5co-pricing').length > 0 ) {
-			$('#fh5co-pricing').waypoint( function( direction ) {
+		if ( $('#fh5co-past').length > 0 ) {
+			$('#fh5co-past').waypoint( function( direction ) {
 										
 					setTimeout(function(){
-						$('.animate-pricing-1').addClass('animated fadeIn');
+						$('.animate-past-1').addClass('animated fadeIn');
 					}, 200);
 					setTimeout(function(){
-						$('.animate-pricing-2').addClass('animated fadeIn');
+						$('.animate-past-2').addClass('animated fadeIn');
 					}, 300);
-					setTimeout(pricingAnimate, 700);
+					setTimeout(pastAnimate, 700);
 					
 					
 					$(this.element).addClass('animated');
@@ -399,11 +316,11 @@
 
 	};
 
-	// Pricing
-	var pressAnimate = function() {
+	// Contact
+	var contactAnimate = function() {
 
-		if ( $('#fh5co-press').length > 0 ) {	
-			$('#fh5co-press .to-animate').each(function( k ) {
+		if ( $('#fh5co-contact').length > 0 ) {	
+			$('#fh5co-contact .to-animate').each(function( k ) {
 				
 				var el = $(this);
 				
@@ -415,10 +332,10 @@
 		}
 
 	};
-	var pressWayPoint = function() {
+	var contactWayPoint = function() {
 
-		if ( $('#fh5co-press').length > 0 ) {
-			$('#fh5co-press').waypoint( function( direction ) {
+		if ( $('#fh5co-contact').length > 0 ) {
+			$('#fh5co-contact').waypoint( function( direction ) {
 										
 					setTimeout(function(){
 						$('.animate-press-1').addClass('animated fadeIn');
@@ -426,7 +343,7 @@
 					setTimeout(function(){
 						$('.animate-press-2').addClass('animated fadeIn');
 					}, 300);
-					setTimeout(pressAnimate, 700);
+					setTimeout(contactAnimate, 700);
 					
 					
 					$(this.element).addClass('animated');
@@ -436,9 +353,35 @@
 		}
 
 	};
-
-
-	
+    
+    var thumbBox = function() {
+        $(".fancybox-thumb").fancybox({
+               prevEffect	: 'fade',
+               nextEffect	: 'fade',
+               helpers	: {
+                   title	: {
+                       type: 'outside'
+                   },
+                   thumbs	: {
+                       width	: 50,
+                       height	: 50
+                   }
+               }
+           });
+    };
+    
+    var mediaBox = function() {
+        $(".fancybox-media").fancybox({
+               prevEffect	: 'fade',
+               nextEffect	: 'fade',
+               helpers	: {
+                   title	: {
+                       type: 'outside'
+                   },
+                   media	: {}
+               }
+           });
+    };
 	
 
 	// Document on load.
@@ -449,14 +392,14 @@
 		clickMenu();
 		windowScroll();
 		navigationSection();
+        thumbBox();
+        mediaBox();
 
 		aboutWayPoint();
+        eventWayPoint();
 		teamWayPoint();
-		servicesWayPoint();
-		featuresWayPoint();
-		testimonialsWayPoint();
-		pricingWayPoint();
-		pressWayPoint();
+		pastWayPoint();
+		contactWayPoint();
 
 	});
 
