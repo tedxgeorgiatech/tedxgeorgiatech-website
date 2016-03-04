@@ -280,6 +280,7 @@ h6 {
 #fh5co-our-events,
 #fh5co-about-us,
 #fh5co-past,
+#fh5co-team,
 #fh5co-contact {
     padding: 7em 0;
 }
@@ -287,12 +288,13 @@ h6 {
     #fh5co-our-events,
     #fh5co-about-us,
     #fh5co-past,
+    #fh5co-team,
     #fh5co-contact {
         padding: 5em 0;
     }
 }
 #fh5co-our-events,
-#fh5co-contact {
+#fh5co-past {
     background: #f4f4f4;
 }
 #fh5co-our-events .box {
