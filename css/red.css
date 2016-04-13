@@ -293,13 +293,14 @@ h6 {
         padding: 5em 0;
     }
 }
-#fh5co-about-us,
-#fh5co-past {
+#fh5co-our-events,
+#fh5co-team,
+#fh5co-contact {
     background: #f4f4f4;
 }
 #fh5co-our-events .box {
     padding: 30px;
-    background: #f4f4f4;
+    background: #fff;
     text-align: center;
     color: #7f7f7f;
     margin-bottom: 70px;
