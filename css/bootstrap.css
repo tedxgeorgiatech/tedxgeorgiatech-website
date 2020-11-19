@@ -102,7 +102,7 @@ sub {
 }
 
 .card {
-  position: absolute;
+  position: relative;
   height: 370px;
   width: 95%;
   max-width: 850px;
