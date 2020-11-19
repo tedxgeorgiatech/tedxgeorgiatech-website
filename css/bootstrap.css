@@ -101,6 +101,30 @@ sub {
   bottom: -0.25em;
 }
 
+.card {
+  position: absolute;
+  height: 370px;
+  width: 95%;
+  max-width: 850px;
+  align: center;
+  font-family: "Times New Roman", sans-serif;
+  margin: auto;
+  background: white;
+  border-radius: 25px;
+}
+
+.card .inner {
+  display: flex;
+}
+
+.inner .img {
+  height: 260px;
+  width: 2;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
 img {
   border: 0;
 }
