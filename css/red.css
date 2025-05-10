@@ -837,3 +837,10 @@ h6 {
     padding-bottom: 2em;
   }
 }
+
+.flex-container {
+display: flex; /* Enables flexbox layout */
+justify-content: center; /* Center horizontally */
+/*align-items: center; /* Center vertically */
+height: 100vh; /* Full viewport height (optional, for vertical centering) */
+}
